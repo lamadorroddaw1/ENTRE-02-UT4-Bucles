@@ -26,9 +26,14 @@ public class DemoBucles
      *  Usa bucles while
      */
     public int mayorPotencia2(int numero) {
-        
-        return 0;
-
+        int resultado = 2;
+        while(resultado < numero){
+            resultado = resultado * 2;         
+        }
+        if (resultado > numero){
+            resultado = resultado / 2;
+        }
+        return resultado;
     }
 
     /**
