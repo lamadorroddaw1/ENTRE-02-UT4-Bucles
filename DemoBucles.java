@@ -93,7 +93,7 @@ public class DemoBucles
     public void escribirCaracter(int n, char caracter)
     {
         for (int i = 1;i <= n; i++){
-        System.out.println(caracter + " ");
+            System.out.print(caracter);
         }
     }
 
@@ -104,18 +104,14 @@ public class DemoBucles
      *   Usa bucles for
      */
     public  void mostrarEscalera(int escalones, int alto, int ancho) {
-        int i = 1;
-        while (i <= 10){
-            int aleatorio = generador.nextInt(0) + 256;
-            int j = 1;
-            System.out.printf("%3d:", aleatorio);
-            while(j <= aleatorio){
-                System.out.printf("%2c", ASTERISCO);
-                j++;
+        System.out.println(); 
+        for(int x = 1;x <= escalones; x++){
+            for (int i = 1;i <= alto; i++){
+                escribirCaracter((x -1) * ancho, ' ');
+                escribirCaracter(ancho, ASTERISCO);
+                System.out.println();            
             }
-            System.out.println();
-            i++;
         }
-
     }
 }
+
