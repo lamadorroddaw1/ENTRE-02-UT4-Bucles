@@ -53,13 +53,13 @@ public class DemoBucles
      *  64 =    64
      */
     public void escribirSumaPotencias(int numero) {
-     int suma = mayorPotencia2(numero);
-     System.out.printf("%6s",numero + " =");
-     while(suma > 0){
-          System.out.printf("%6s",suma);  
-          suma = suma /= 2;
-           
-       }       
+        int suma = mayorPotencia2(numero);
+        System.out.printf("%6s",numero + " =");
+        while(suma > 0){
+            System.out.printf("%6s",suma);  
+            suma = suma /= 2;
+
+        }       
     }
 
     /**
@@ -74,9 +74,39 @@ public class DemoBucles
      * 
      */
     public void generarAleatorios(int n) {
-       int i = 1;
+        int i = 1;
+        int aleatorio = 0;
+        while(aleatorio != 255 && i <=n ){
+            aleatorio = generador.nextInt(255);
+            i++;
+            escribirSumaPotencias(aleatorio);
+            System.out.println();
+        }
+        System.out.println("Bucle terminador por que ya se han generado " + i + "aleatorios");
+    }
+
+    /**
+     *  Escribe en pantalla caracter n veces en la misma línes
+     *  
+     *  Usa bucles for
+     */
+    public void escribirCaracter(int n, char caracter)
+    {
+        for (int i = 1;i <= n; i++){
+        System.out.println(caracter + " ");
+        }
+    }
+
+    /**
+     *  Genera la figura tal como muestra el enunciado 
+     *  con ayuda del método anterior
+     *  
+     *   Usa bucles for
+     */
+    public  void mostrarEscalera(int escalones, int alto, int ancho) {
+        int i = 1;
         while (i <= 10){
-            int aleatorio = generador.nextInt(46) + 5;
+            int aleatorio = generador.nextInt(0) + 256;
             int j = 1;
             System.out.printf("%3d:", aleatorio);
             while(j <= aleatorio){
@@ -88,28 +118,4 @@ public class DemoBucles
         }
 
     }
-
-    /**
-     *  Escribe en pantalla caracter n veces en la misma línes
-     *  
-     *  Usa bucles for
-     */
-    public void escribirCaracter(int n, char caracter)
-    {
-         
-    }
-
-    /**
-     *  Genera la figura tal como muestra el enunciado 
-     *  con ayuda del método anterior
-     *  
-     *   Usa bucles for
-     */
-    public  void mostrarEscalera(int escalones, int alto, int ancho) {
-        System.out.println();
-
-         
-
-    }
-
 }
