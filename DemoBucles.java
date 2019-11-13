@@ -1,3 +1,4 @@
+import java.util.Random;
 /**
  *    @author - 
  */
@@ -5,13 +6,13 @@ public class DemoBucles
 {
     private final char ASTERISCO = '*';
     private final char ESPACIO = ' ';
-
+    private Random generador;
     /**
      * Constructor  
      */
     public DemoBucles()
     {
-       
+        generador = new Random();
     }
 
     /**
@@ -73,8 +74,18 @@ public class DemoBucles
      * 
      */
     public void generarAleatorios(int n) {
-
-       
+       int i = 1;
+        while (i <= 10){
+            int aleatorio = generador.nextInt(46) + 5;
+            int j = 1;
+            System.out.printf("%3d:", aleatorio);
+            while(j <= aleatorio){
+                System.out.printf("%2c", ASTERISCO);
+                j++;
+            }
+            System.out.println();
+            i++;
+        }
 
     }
 
