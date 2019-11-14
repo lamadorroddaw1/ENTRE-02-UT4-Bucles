@@ -1,4 +1,10 @@
 #BlueJ package file
+dependency1.from=AppDemoBucles
+dependency1.to=Utilidades
+dependency1.type=UsesDependency
+dependency2.from=AppDemoBucles
+dependency2.to=DemoBucles
+dependency2.type=UsesDependency
 editor.fx.0.height=1047
 editor.fx.0.width=974
 editor.fx.0.x=953
@@ -13,7 +19,7 @@ package.editor.x=953
 package.editor.y=0
 package.frame.height=1047
 package.frame.width=974
-package.numDependencies=0
+package.numDependencies=2
 package.numTargets=3
 package.showExtends=true
 package.showUses=true

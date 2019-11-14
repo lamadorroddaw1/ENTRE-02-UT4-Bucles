@@ -74,15 +74,15 @@ public class DemoBucles
      * 
      */
     public void generarAleatorios(int n) {
-        int i = 1;
+        int i = 0;
         int aleatorio = 0;
-        while(aleatorio != 255 && i <=n ){
+        while(aleatorio != 255 && i < n ){
             aleatorio = generador.nextInt(255);
             i++;
             escribirSumaPotencias(aleatorio);
             System.out.println();
         }
-        System.out.println("Bucle terminador por que ya se han generado " + i + "aleatorios");
+        System.out.println("Bucle terminador por que ya se han generado " + i + " aleatorios");
     }
 
     /**
