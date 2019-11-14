@@ -1,6 +1,6 @@
 import java.util.Random;
 /**
- *    @author - 
+ *    @author - Lander Amador Rodriguez
  */
 public class DemoBucles
 {
